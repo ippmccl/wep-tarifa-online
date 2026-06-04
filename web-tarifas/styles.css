@@ -1,0 +1,616 @@
+/* Estilo profesional para lectura en pantallas móviles y escritorio */
+:root {
+  --bg: #f5ede9;
+  --surface: #fff8f6;
+  --text: #3a2f37;
+  --muted: #776b75;
+  --primary: #9b79b8;
+  --primary-dark: #76518b;
+  --accent: #e7c7da;
+  --border: rgba(155,121,184,.18);
+  --radius: 24px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8eff2 0%, #f7ede8 100%);
+  line-height: 1.6;
+}
+a,
+a:visited {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--primary-dark);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.page {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 4rem;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 250, 249, .95);
+  border-bottom: 1px solid rgba(155,121,184,.15);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.brand-logo .logo-main {
+  max-height: 48px;
+  width: auto;
+  border-radius: 14px;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+}
+.logo-ipp {
+  max-height: 40px;
+  width: auto;
+  border-radius: 12px;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+.nav-links a {
+  padding: .5rem .75rem;
+  border-radius: 999px;
+  transition: background .2s ease;
+}
+.nav-links a:hover {
+  background: rgba(155,121,184,.12);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
+.hero-copy {
+  max-width: 36rem;
+}
+.hero-copy h1 {
+  font-size: clamp(2.7rem, 4vw, 4rem);
+  line-height: 1.02;
+  margin: 0 0 1rem;
+  letter-spacing: -0.05em;
+  color: var(--primary-dark);
+}
+.hero-copy p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0 0 1.75rem;
+}
+.hero-copy .price-amount {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  line-height: 1.05;
+  display: inline-block;
+  margin-left: 0.25rem;
+  color: var(--primary-dark);
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.hero-buttons a {
+  font-size: 0.96rem;
+  line-height: 1.3;
+}
+.button, .button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.button {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+}
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 45px rgba(155,121,184,.18);
+}
+.button-secondary {
+  background: #fff;
+  border: 1px solid rgba(155,121,184,.18);
+  color: var(--primary-dark);
+  padding: 0.85rem 1.2rem;
+}
+
+/* Forzar títulos en lila y botones con fondo lila y texto blanco */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-dark) !important;
+}
+
+/* Botones y enlaces con aspecto de botón: fondo lila y texto blanco */
+.button,
+.button-secondary,
+.nav-links a,
+.social-link,
+.contact-card,
+.carousel-button,
+.book-card a,
+.card a {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.button-secondary {
+  background: #fff !important;
+  color: var(--primary-dark) !important;
+  border-color: rgba(155,121,184,.18) !important;
+}
+
+/* Ajustes de hover para mantener contraste */
+.nav-links a:hover,
+.social-link:hover,
+.button-secondary:hover,
+.contact-card:hover,
+.carousel-button:hover,
+.book-card a:hover,
+.card a:hover {
+  background: var(--primary-dark) !important;
+  color: #fff !important;
+}
+.contact-grid,
+.contact-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+.contact-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.85rem 0.95rem;
+  border-radius: 20px;
+  background: #ffffff !important;
+  border: 1px solid rgba(155,121,184,.25);
+  text-decoration: none;
+  color: var(--primary-dark) !important;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.contact-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(155,121,184,.12);
+  background: #fff;
+}
+.contact-card-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(155,121,184,.14);
+  border: 1px solid rgba(155,121,184,.2);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.contact-card h3 {
+  margin: 0 0 .18rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+}
+.contact-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Allow long email addresses to wrap and prevent flex overflow */
+.contact-card {
+  min-width: 0;
+}
+.contact-card > div:last-child {
+  min-width: 0;
+}
+.contact-card p,
+.contact-card a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.about-top {
+  align-items: center;
+  gap: 2rem;
+}
+.about-photo img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(119,107,117,.06);
+  display: block;
+}
+/* Justify paragraphs and list items in sections for cleaner alignment */
+.section p,
+.section li {
+  text-align: justify;
+}
+
+@media (max-width: 860px) {
+  .about-top {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    order: 2;
+  }
+}
+/* Utility: force contact cards to stack vertically when needed */
+.contact-grid.stack {
+  grid-template-columns: 1fr !important;
+  align-items: start;
+}
+
+.contact-grid.stack .contact-card {
+  width: 100%;
+}
+.contact-grid.stack .contact-card + .contact-card {
+  margin-top: 0.8rem;
+}
+.hero-image {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(155,121,184,.12) 0%, rgba(247,236,235,.65) 100%);
+}
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.book-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background: rgba(231,199,218,.3);
+  border: 1px solid rgba(155,121,184,.2);
+}
+.book-image {
+  width: 96px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(155,121,184,.14);
+}
+.carousel-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.carousel {
+  overflow: hidden;
+}
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth;
+}
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel-track::-webkit-scrollbar-thumb {
+  background: rgba(155,121,184,.35);
+  border-radius: 999px;
+}
+.carousel-item {
+  scroll-snap-align: start;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 22px;
+  min-width: 240px;
+  border: 1px solid rgba(155,121,184,.16);
+  box-shadow: 0 18px 40px rgba(119,107,117,.05);
+}
+.carousel-item img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+.carousel-item h3 {
+  margin: 0 0 .75rem;
+  color: var(--primary-dark);
+}
+.carousel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(155,121,184,.24);
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.carousel-button:hover {
+  background: rgba(155,121,184,.12);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(155,121,184,.12);
+}
+.section {
+  margin: 3rem 0;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 18px 50px rgba(119,107,117,.08);
+}
+
+/* Sección 'Las mariposas del alma' */
+.section.mariposas {
+  padding: 2.5rem 1.5rem;
+}
+.section.mariposas .mariposas-inner {
+  align-items: center;
+  gap: 0.8rem;
+  grid-template-columns: 45% 55%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.section.mariposas .mariposas-inner > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.6rem;
+}
+.mariposas-img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 12px 30px rgba(119,107,117,.06);
+}
+.mariposas-text {
+  max-width: 620px;
+}
+.mariposas-text p {
+  color: var(--muted);
+}
+.mariposas-text .quote {
+  margin-top: .5rem;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.mariposas-text .cite {
+  margin-top: .6rem;
+  font-size: .875rem;
+  color: var(--muted);
+}
+
+/* Línea separada y sin saltos para la frase principal */
+.mariposas-inline {
+  display: block;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 0.25rem 0 0.5rem;
+}
+
+@media (max-width: 420px) {
+  .mariposas-inline {
+    white-space: normal;
+    font-size: 1rem;
+  }
+}
+
+/* Cita en cursiva para la referencia */
+.mariposas-text .cite {
+  font-style: italic;
+}
+@media (max-width: 860px) {
+  .section.mariposas .mariposas-inner {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 1rem;
+  }
+  .mariposas-img {
+    margin: 0 auto 1rem;
+    max-width: 280px;
+  }
+  .mariposas-text {
+    padding: 0 1rem;
+  }
+  .mariposas-text .quote {
+    font-size: 0.98rem;
+  }
+}
+.section h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--primary-dark);
+}
+.section p {
+  color: var(--muted);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+.card {
+  background: #faf9f7;
+  padding: 1.5rem;
+  border-radius: 22px;
+  border: 1px solid rgba(91,61,153,.08);
+}
+.card h3 {
+  margin: 0 0 .75rem;
+  color: var(--primary-dark);
+}
+.card p {
+  margin: 0;
+}
+.highlight {
+  color: var(--accent);
+  font-weight: 700;
+}
+.grid-2 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 1fr);
+}
+.footer {
+  margin-top: 3rem;
+  padding: 2rem 0 0;
+  color: var(--muted);
+}
+.footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+.footer small {
+  display: block;
+}
+.social-links {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .75rem 1rem;
+  border-radius: 999px;
+  background: rgba(155,121,184,.12);
+  border: 1px solid rgba(155,121,184,.25);
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.social-link:hover {
+  transform: translateY(-1px);
+  background: rgba(155,121,184,.18);
+  box-shadow: 0 12px 24px rgba(155,121,184,.08);
+}
+.social-link svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.social-link.x svg {
+  width: 20px;
+  height: 20px;
+}
+.social-link.youtube {
+  color: #c4302b;
+}
+.social-link.instagram {
+  color: #9b79b8;
+}
+.social-link.tiktok {
+  color: #9b79b8;
+}
+.social-link.linkedin {
+  color: #0a66c2;
+}
+.social-link.facebook {
+  color: #1877f2;
+}
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    min-height: 320px;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-links {
+    justify-content: center;
+  }
+  .button, .button-secondary {
+    width: 100%;
+  }
+}
+
+/* prueba de parche */
+
+/* Asegurar que todos los enlaces dentro de títulos y subtítulos sean lila (no letras negras) */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.section h2 a,
+.card h3 a,
+.contact-card h3 a,
+.carousel-item h3 a,
+.brand a {
+  color: var(--primary);
+  text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+.section h2 a:hover,
+.card h3 a:hover,
+.contact-card h3 a:hover,
+.carousel-item h3 a:hover,
+.brand a:hover {
+  color: var(--primary-dark);
+}
